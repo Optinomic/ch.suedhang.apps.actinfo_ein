@@ -18,7 +18,7 @@ website = http://www.optinomic.com/
 
 
 [template ActInfo 6 35]
-__opapp_include(../lib/polymer/index.m4)
+__opapp_include(lib/polymer/index.m4)
 __opapp_include(elements/element-actinfo.html)
 __opapp_include(elements/actinfo-problemsubstanzen.html)
 __opapp_include(elements/view.html)
