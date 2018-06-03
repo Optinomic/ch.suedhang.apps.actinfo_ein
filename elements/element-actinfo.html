@@ -129,13 +129,10 @@
             _sr_actinfo_aus: {
                 type: Object,
                 statePath: function(state) {
-                    if ((this.appIdAustritt !== null) && (this.appIdAustritt !== undefined)) {
-                        if (this.appIdAustritt in state.survey_responses.data) {
-                            return state.survey_responses.data[this.appIdAustritt]
-                        } else {
-                            return null
-                        };
-                    } else {
+                    try {
+                        return state.survey_responses.data[this.appIdAustritt];
+                    }
+                    catch(err) {
                         return null
                     };
                 },
