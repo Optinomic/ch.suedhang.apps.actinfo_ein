@@ -117,13 +117,10 @@
             _sr_actinfo_ein: {
                 type: Object,
                 statePath: function(state) {
-                    if ((this.appIdEintritt !== null) && (this.appIdEintritt !== undefined)) {
-                        if (this.appIdEintritt in state.survey_responses.data) {
-                            return state.survey_responses.data[this.appIdEintritt]
-                        } else {
-                            return null
-                        };
-                    } else {
+                    try {
+                        return state.survey_responses.data[this.appIdEintritt];
+                    }
+                    catch(err) {
                         return null
                     };
                 },
