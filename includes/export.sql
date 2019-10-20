@@ -471,4 +471,4 @@ FROM "survey_response_view"
 LEFT JOIN patient ON(survey_response_view.patient_id = patient.id) 
 LEFT JOIN stay ON(survey_response_view.stay_id = stay.id) 
 
-WHERE module = 'ch.suedhang.apps.actinfo_ein';
+WHERE module = 'ch.suedhang.apps.actinfo_ein.production';
