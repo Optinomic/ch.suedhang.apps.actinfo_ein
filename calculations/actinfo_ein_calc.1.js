@@ -353,7 +353,7 @@ function main(responses) {
 
 
         if (d['QZEA120[VZEA120a]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120a]']) * 0.4;
+            var gramm = parseInt(d['QZEA120[VZEA120a]']) * 4;
             var drink_obj = {
                 "drink": "Bier",
                 "gramm": calc.roundToOne(gramm),
@@ -366,7 +366,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120b]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120b]']) * 0.4;
+            var gramm = parseInt(d['QZEA120[VZEA120b]']) * 4;
             var drink_obj = {
                 "drink": "Suure Most",
                 "gramm": calc.roundToOne(gramm),
@@ -379,7 +379,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120c]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120c]']) * 0.4;
+            var gramm = parseInt(d['QZEA120[VZEA120c]']) * 4;
             var drink_obj = {
                 "drink": "Alcopop",
                 "gramm": calc.roundToOne(gramm),
@@ -392,7 +392,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120d]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120d]']) * 0.4;
+            var gramm = parseInt(d['QZEA120[VZEA120d]']) * 4;
             var drink_obj = {
                 "drink": "andere 5 Vol.-%",
                 "gramm": calc.roundToOne(gramm),
@@ -405,7 +405,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120e]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120e]']) * 0.96;
+            var gramm = parseInt(d['QZEA120[VZEA120e]']) * 9.6;
             var drink_obj = {
                 "drink": "Wein/Champagner/Sekt",
                 "gramm": calc.roundToOne(gramm),
@@ -418,7 +418,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120f]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120f]']) * 0.96;
+            var gramm = parseInt(d['QZEA120[VZEA120f]']) * 9.6;
             var drink_obj = {
                 "drink": "andere 12 Vol.-%",
                 "gramm": calc.roundToOne(gramm),
@@ -431,7 +431,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120g]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120g]']) * 1.6;
+            var gramm = parseInt(d['QZEA120[VZEA120g]']) * 16;
             var drink_obj = {
                 "drink": "Wermut/Portwein",
                 "gramm": calc.roundToOne(gramm),
@@ -444,7 +444,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120h]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120h]']) * 1.6;
+            var gramm = parseInt(d['QZEA120[VZEA120h]']) * 16;
             var drink_obj = {
                 "drink": "andere 20 Vol.-%",
                 "gramm": calc.roundToOne(gramm),
@@ -457,7 +457,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120i]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120i]']) * 3.2;
+            var gramm = parseInt(d['QZEA120[VZEA120i]']) * 32;
             var drink_obj = {
                 "drink": "Schnäpse (ink. Café Schnaps)",
                 "gramm": calc.roundToOne(gramm),
@@ -470,7 +470,7 @@ function main(responses) {
         };
 
         if (d['QZEA120[VZEA120j]'] !== "") {
-            var gramm = parseInt(d['QZEA120[VZEA120j]']) * 3.2;
+            var gramm = parseInt(d['QZEA120[VZEA120j]']) * 32;
             var drink_obj = {
                 "drink": "andere 40 Vol.-%",
                 "gramm": calc.roundToOne(gramm),
