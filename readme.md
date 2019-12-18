@@ -17,3 +17,38 @@ act-info wird durch das Bundesamt für Gesundheit BAG finanziert und koordiniert
 - Zusatzangaben vor Eintritt (Hauptproblemsubstanz)
 - AUDIT-Summenwert (Verdacht auf Alkoholabhängigkeit)
 - Fagerström-Summenwert (Ausprägung der Nikotinabhängigkeit)
+
+
+## Admin
+
+### SQL
+
+Direktes Auslesen von `calculation_values` via SQL:
+
+```SQL
+SELECT 
+ 
+patient_id as optinomic_pid,
+time,
+cast(calc.value as json)->0 as full_calc,
+cast(calc.value as json)->0->'hash' as hash,
+cast(calc.value as json)->0->'problemsubstanzen'->'substanzen'->0->'drinks'->'gramm_total' as gramm,
+*
+
+FROM calculation_values AS calc 
+WHERE calc.module = 'ch.suedhang.apps.actinfo_ein.production' 
+```
+
+oder in Kombination mit `survey_response` kann wie folgt abgefragt werden.
+
+```SQL
+SELECT 
+ 
+calc.value
+ 
+FROM survey_response_view AS sr 
+LEFT JOIN calculation_values AS calc
+ON calc.patient_id = sr.patient_id AND calc.module = sr.module
+WHERE calc.module = 'ch.suedhang.apps.isk' AND calculation = 'scores_calculation'
+LIMIT 5
+```
