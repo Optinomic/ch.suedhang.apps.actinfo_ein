@@ -6,6 +6,7 @@ version = __opapp_version()
 type = patient
 
 [description]
+Sonderversion für den stationären Alkohol- und Medikamentenbereich.
 
 [developer]
 first_name = Beat
@@ -18,10 +19,8 @@ website = http://www.optinomic.com/
 
 
 [template ActInfo 6 35]
-__opapp_include(lib/polymer/index.m4)
-__opapp_include(elements/element-actinfo.html)
-__opapp_include(elements/actinfo-problemsubstanzen.html)
-__opapp_include(elements/view.html)
+__opapp_include(optinomic_lib/dist/templates/ch.suedhang.apps.actinfo_ein.html)
+
 
 
 [readme]
